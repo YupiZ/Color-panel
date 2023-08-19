@@ -1,4 +1,3 @@
-🎨 Color-panel
 🌐 **Introduction**
 Welcome to my Color-panel! A vibrant space where you can experiment and pick any combination of colors that strike your fancy.
 
