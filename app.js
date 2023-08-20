@@ -111,13 +111,10 @@ closeBtn.onclick = function() {
     overlay.classList.add('hidden');
 }
 
-window.onload = function() {
-
-    if(!localStorage.getItem('modalShown')){
-
-    modal.style.display = "flex";
-	overlay.classList.remove('hidden');
-
-    localStorage.setItem('modalShown', 'true');
+window.addEventListener('DOMContentLoaded', function() {
+    if(!localStorage.getItem('modalShown') || localStorage.getItem('modalShown') !== 'true'){
+        modal.style.display = "flex";
+        overlay.classList.remove('hidden');
+        localStorage.setItem('modalShown', 'true');
     }
-}
+})
