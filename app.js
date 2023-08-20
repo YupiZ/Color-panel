@@ -77,6 +77,7 @@ document.addEventListener('keydown',(event)=>{
 		setColors();
 		event.preventDefault();
 	}
+	e
 })
 
 function copyToClipboard(text){
@@ -112,17 +113,15 @@ closeBtn.onclick = function() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-    console.log('Event triggered');
-    console.log('localStorage:', localStorage.getItem('modalShown'));
+    const modalShownValue = localStorage.getItem('modalShown');
 
-    // If modalShown doesn't exist or its value is not 'true', show the modal.
-    if (!localStorage.getItem('modalShown') || localStorage.getItem('modalShown') !== 'true') {
-        console.log('Showing modal and setting localStorage');
+    console.log('DOMContentLoaded triggered');
+    console.log('localStorage modalShown value:', modalShownValue);
 
+    if (modalShownValue !== 'true') {
+        console.log('Displaying the modal');
         modal.style.display = "flex";
         overlay.classList.remove('hidden');
-
-        // Remember that the modal has been shown.
         localStorage.setItem('modalShown', 'true');
     }
 });
