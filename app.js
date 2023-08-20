@@ -100,3 +100,24 @@ function getHashColors(){
 	return[]
 }
 setColors(true);
+
+let modal = document.querySelector('.modal');
+let closeBtn = document.querySelector('.btn');
+let overlay = document.querySelector('.overlay');
+
+// Close the modal and hide the overlay
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+    overlay.classList.add('hidden');
+}
+
+window.onload = function() {
+
+    if(!localStorage.getItem('modalShown')){
+
+    modal.style.display = "flex";
+	overlay.classList.remove('hidden');
+
+    localStorage.setItem('modalShown', 'true');
+    }
+}

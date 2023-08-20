@@ -8,6 +8,7 @@ body {
 	height: 100vh;
 	display: flex;
 	font-family: 'Outfit', sans-serif;
+	justify-content: center;
 }
 
 .col{
@@ -45,4 +46,83 @@ body {
 .col button:hover{
 	background: rgba(0,0,0,0.1);
 	cursor: pointer;
+}
+
+
+.modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.4rem;
+	width: 600px;
+	padding: 1.3rem;
+	min-height: 250px;
+	position: absolute;
+	top: 20%;
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 20px;
+
+	z-index: 2;
+}
+
+
+.modal p {
+	font-size: 1rem;
+	color: #5e5d5d;
+	margin: 0.4rem 0 0.2rem;
+	text-justify: distribute;
+}
+
+.modal h2 {
+	font-size: 2rem;
+	color: #20936D;
+	margin: 0.4rem 0 0.2rem;
+	text-align: center;
+
+}
+.modal h3 {
+	font-size: 1rem;
+	color: #1d1b1b;
+	margin: 0.4rem 0 0.2rem;
+
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	font-weight: 600;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.8rem 1.4rem;
+	font-weight: 700;
+	background-color:#74278C;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 1em;
+	}
+.btn:hover {
+	background-color: #88477C;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(3px);
+	z-index: 1;
+}
+.hidden {
+	display: none;
+
 }
