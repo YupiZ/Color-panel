@@ -112,9 +112,17 @@ closeBtn.onclick = function() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-    if(!localStorage.getItem('modalShown') || localStorage.getItem('modalShown') !== 'true'){
+    console.log('Event triggered');
+    console.log('localStorage:', localStorage.getItem('modalShown'));
+
+    // If modalShown doesn't exist or its value is not 'true', show the modal.
+    if (!localStorage.getItem('modalShown') || localStorage.getItem('modalShown') !== 'true') {
+        console.log('Showing modal and setting localStorage');
+
         modal.style.display = "flex";
         overlay.classList.remove('hidden');
+
+        // Remember that the modal has been shown.
         localStorage.setItem('modalShown', 'true');
     }
-})
+});
