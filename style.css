@@ -55,7 +55,10 @@ body {
 @media screen and (max-width: 480px){
 
 	body {
-		flex-direction: column;
+	height: 100vh;
+	display: column;
+	justify-content: center;
+
 	}
 
 }
