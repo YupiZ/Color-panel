@@ -56,7 +56,8 @@ body {
 
 	body {
 	height: 100vh;
-	display: column;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 
 	}
